@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Reviewdog Rubocop Auto Suggestion",
+  "version": "1.0",
+  "description": "Automatically fill the title and body of suggestions provided by reviewdog/action-rubocop",
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://github.com/*"
+      ]
+    }
+  ]
+
+}
