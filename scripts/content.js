@@ -6,7 +6,7 @@ for (let i = 0; i < commentBodies.length; i++) {
     const title = `Fix rubocop error: ${p.childNodes[1].textContent}`;
     const body = `${title}\n${p.childNodes[4].textContent}`;
     suggestionButton.addEventListener('click', (el) => {
-      const selectMenu = el.target.nextElementSibling;
+      const selectMenu = commentBodies[i].querySelectorAll('.SelectMenu')[0];
       selectMenu.querySelectorAll('.js-suggestion-commit-title')[0].value = title;
       selectMenu.querySelectorAll('.js-quick-submit')[0].value = body;
     });
